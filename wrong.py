@@ -1,3 +1,4 @@
+#Sample Wrong Code
 t = int(input())
 for i in range(t):
     n, l, r = map(int, input().split())
