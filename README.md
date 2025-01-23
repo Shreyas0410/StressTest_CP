@@ -17,7 +17,7 @@ This script automates stress testing by comparing the outputs of a **correct** s
 2. **`generator.py`**: Generates random test cases.
 3. **`correct.py`**: The correct solution.
 4. **`wrong.py`**: The solution being tested for errors.
-5. **`delete.py`: To delete all the testcases.
+5. **`delete.py`**: To delete all the testcases.
 6. **`run_test.bat`**: Batch script for easy execution on Windows.
 7. **`run_test.sh`**: Script for easy execution on Linux.
    
