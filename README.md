@@ -1,35 +1,38 @@
+# Stress Testing Application for Competitive Programming
 
-# Auto-Tester
+This script automates stress testing by comparing the outputs of a **correct** solution and a **potentially incorrect** solution on randomly generated test cases. It helps identify edge cases where the incorrect solution fails.
 
-Script to find testcases where your code is failing
+---
 
-## How to use(UBUNTU)
+## Features
+- Automates the generation of test cases.
+- Compares outputs of two solutions (`correct.py` and `wrong.py`).
+- Saves failing test cases for debugging.
+- Supports multiple programming languages: C, C++, Java, Python.
 
-This script requires 4 parameters.
+---
 
-- `-g` : **Generator code** : Code which generates random testcases.
+## Files
+1. **`test.py`**: The main script to run the stress tests.
+2. **`generator.py`**: Generates random test cases.
+3. **`correct.py`**: The correct solution.
+4. **`wrong.py`**: The solution being tested for errors.
+5. **`run_test.bat`**: Batch script for easy execution on Windows.
 
-- `-c`: **Correct code.** : Brute force code which will always give correct results but has bad complexity.
+---
 
-- `-w`: **Wrong code** - Code with better complexity but is giving wrong answers.
+## Usage
 
-- `-t`: **Number of test cases(optional)** : Enter how many testcases you want to genrate where your correct code and wrong code gives different results. It is equal to 1 by default.
+### Prerequisites
+- Python installed on your system.
+- Required compilers (if testing C, C++, or Java solutions).
 
-Please check the screenshot attached at the bottom for better clarity.
-
-### Languages supported
-
-Currently these languages are supported: `C`, `C++`, `Java` and `Python`. You can use any combinations of these for your three code files(generator, correct and wrong).
-
-## Output
-Output contains 3*n number of files where n is the number of testcases given in fourth parameter. Output file format will be as follows.
-
-input0, input1, input2, ...
-
-correct0, correct1, correct2, ...
-
-wrong0, wrong1, wrong2, ...
-
-## Screenshot
-
-![example screenshot](https://drive.google.com/uc?export=view&id=1G9l1hdyAKgjSjMu5Y5W5DaGAUieV26Fs)
+### Running the Script
+1. Place all required files (`test.py`, `generator.py`, `correct.py`, `wrong.py`) in the same directory.
+2. Use the batch file for simplified execution:
+   ```cmd
+   ./run_test
+   ```
+   For Ubuntu
+   ```cmd
+   bash run_test.sh
