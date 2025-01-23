@@ -18,7 +18,7 @@ This script automates stress testing by comparing the outputs of a **correct** s
 3. **`correct.py`**: The correct solution.
 4. **`wrong.py`**: The solution being tested for errors.
 5. **`run_test.bat`**: Batch script for easy execution on Windows.
-
+6. **`run_test.sh`**: Script for easy execution on Linux.
 ---
 
 ## Usage
@@ -36,3 +36,14 @@ This script automates stress testing by comparing the outputs of a **correct** s
    For Ubuntu
    ```cmd
    bash run_test.sh
+
+## Changing Language
+To test solutions written in languages other than Python:
+1. Rename or specify the correct solution and wrong solution files with appropriate extensions. <br/>
+   For C: ```correct.c```, ```wrong.c``` <br/>
+   For C++: ```correct.cpp```, ```wrong.cpp``` <br/>
+   For Java: ```correct.java```, ```wrong.java```
+2. Change the Script accordingly <br />
+   For C: ```python test.py -g generator.py -c correct.c -w wrong.c -t 10``` <br />
+   For C++: ```python test.py -g generator.py -c correct.cpp -w wrong.cpp -t 10``` <br />
+   For Java: ```python test.py -g generator.py -c correct.java -w wrong.java -t 10``` <br />
